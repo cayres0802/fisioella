@@ -317,7 +317,7 @@ section{
 .contato a {
     text-decoration: none;
     color: var(--color-text);
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .contato a:hover {
@@ -337,6 +337,16 @@ section{
     font-family: var(--text-font-family);
     font-size: var(--p-font-size);
     text-align: left;
+}
+
+.endereços a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 400;
+}
+
+.endereços a:hover {
+    color: var(--color-primary);
 }
 
 .redes-sociais {
