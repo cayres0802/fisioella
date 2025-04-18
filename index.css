@@ -6,9 +6,9 @@
     --color-text: #2B1F2F;
     --shadow: rgba(131, 40, 109, 1);
 
-    --title-font-family: 'Playfair Display', sans-serif;
-    --title2-font-family: 'Kudryashev Display Sans', sans-serif;
-    --title3-font-family: 'Quicksand', sans-serif;
+    --play-font-family: 'Playfair Display', sans-serif;
+    --kudry-font-family: 'Kudryashev Display Sans', sans-serif;
+    --quick-font-family: 'Quicksand', sans-serif;
     --text-font-family: 'Poppins', sans-serif;
 
     --h1-font-size: 40px;
@@ -28,11 +28,15 @@ body{
 /* header */
 header{
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
+    align-items: center; 
+    width: 98%;
+    padding: 15px 15px 0 15px; /* t r b l */
+    background-color: rgb(251, 241, 229, 0.8);
     color: var(--color-text);
-    border-bottom: 2px solid var(--color-accent);
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: 0 2px 6px var(--shadow);
 }
 
 .linha-vertical{
@@ -43,27 +47,63 @@ header{
     background-color: var(--color-primary);
 }
 
+
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
 .fisioella {
-    font-family: var(--title3-font-family);
+    font-family: var(--quick-font-family);
     font-size: var(--h1-font-size);
     font-weight: 300;
     color: var(--color-text);
+    margin: 0;
 }
 
 .dra-neila{
-    font-family: var(--title2-font-family);
+    font-family: var(--kudry-font-family);
     font-size: var(--h1-font-size);
     font-weight: 600;
     color: var(--color-text);
+    margin: 0;
 }
 
 ul {
     display: flex;
-    gap: 20px;
+    gap: 50px;
     list-style: none;
+    padding: 0;
 }
 
 .nav-list a{
+    font-family: var(--quick-font-family);
+    font-size: var(--h3-font-size);
     text-decoration: none;
     color: var(--color-text);
 }
+.nav-list a::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: width 0.3s;
+}
+.nav-list a:hover::after{
+    width: 100%;
+}
+.nav-list a:hover{
+    color: var(--color-primary);
+    text-shadow: 0 1px 3px var(--shadow);
+}
+.nav-list a.active {
+    color: var(--color-primary);
+    text-shadow: 0 1px 3px var(--shadow);
+    font-weight: bold;
+}
+
