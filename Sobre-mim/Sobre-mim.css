@@ -168,12 +168,16 @@ section{
  
 }
 
-#inicio h2{
+#inicio h1{
     font-family: var(--kudry-font-family);
     font-size: var(--h2-font-size);
     font-weight: 600;
     color: var(--color-text);
-   
+    border-bottom: 3px solid var(--color-primary);
+    max-width: 25%; /* Define a largura máxima */
+    margin: 0 auto; 
+    box-shadow: 0px 8px 5px -6px var(--shadow); /* Shadow aplicado apenas no border-bottom */
+    
 }
 
 #inicio p{
@@ -181,6 +185,7 @@ section{
     font-size: var(--p-font-size);
     font-weight: 300;
     color: var(--color-text);
+    padding: 20px 80px; /* t r b l */
    
 }
 
@@ -204,51 +209,7 @@ section{
     box-shadow: 0 0 2px var(--shadow), 0 0 6px var(--shadow), 0 0 10px var(--shadow);
     transform: translateY(-5px);
 }
-.fisio-pelvica {
-    padding: 80px;
-    font-family: var(--text-font-family);
-    font-size: var(--p-font-size);
-    font-weight: 400;
-    color: var(--color-text);
-}
-.publico-alvo {
-    padding: 80px;
-    font-family: var(--text-font-family);
-    font-size: var(--p-font-size);
-    font-weight: 400;
-    color: var(--color-text);
-    text-align: center;
-}
 
-.publico-alvo ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.item7 li{
-    grid-column: 2 / 2;
-}
-
-.publico-alvo li{
-    font-family: var(--text-font-family);
-    font-size: var(--p-font-size);
-    font-weight: 400;
-    color: var(--color-primary);
-    margin: 0;
-    padding: 20px;
-    z-index: -1;
-    list-style-type: none;
-    align-content: center;
-    border-radius: 20px;
-    border: rgba(131, 40, 109, 0.6) solid 2px;
-    background-color: var(--color-secondary);
-    box-shadow: 0 0 7px var(--shadow);
-    transition: all 0.3s ease, box-shadow 0.3s ease;
-    animation: float 3s ease-in-out infinite;
-}
 
 @keyframes float {
     0% {
