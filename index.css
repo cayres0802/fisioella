@@ -457,13 +457,15 @@ section{
 
     .navbar {
         display: none;
-        background-color: var(--color-background); /* ou #fef6e4 */
+        position: relative;
+        background-color: rgba(251, 241, 229, 0.5); /* ou #fef6e4 */
         padding-top: 80px; /* espaço para o header */
         z-index: 998;
         width: 100%;
         max-height: 100vh;
         overflow-y: auto;
-
+        display: none;
+            
     }
 
     .navbar-container{
@@ -473,11 +475,10 @@ section{
         gap: 10px;
     }
     
-
     .navbar.active {
         display: block;
-        margin-top: 76px;
         padding: 0;
+        flex-wrap: wrap;
     }
 
     .nav-list {
@@ -488,14 +489,27 @@ section{
 
     .hamburger {
         display: block;
-        position: fixed;
         right: 40px;
     }
-
+    header {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem linha */
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: rgba(251, 241, 229, 0.8);
+        z-index: 10;
+        box-shadow: 0 2px 6px var(--shadow);
+        box-sizing: border-box;
+    }
+    
     .linha-vertical {
         height: 40px;
         margin-bottom: 10px;/* t r b l */
-
     }
     
     .fisioella {
