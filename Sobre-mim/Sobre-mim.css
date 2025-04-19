@@ -465,14 +465,12 @@ section{
     }
 
     #inicio h1{
-        font-size: px;
+        max-width: 60%;
     }
-    
-    .main-text{
-        padding: 10px;
-    }
-    
+
+
     #inicio p{
+        padding: 10px 20px; /* t r b l */
         font-size: 24px;
     }
 
