@@ -464,13 +464,14 @@ section{
         font-size: 23px;
     }
 
-    #inicio h2{
-        font-size: 30px;
+    #inicio h1{
+        font-size: px;
     }
     
     .main-text{
         padding: 10px;
     }
+    
     #inicio p{
         font-size: 24px;
     }
