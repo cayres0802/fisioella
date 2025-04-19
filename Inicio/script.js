@@ -1,10 +1,12 @@
-const backToTop = document.querySelector('.back-to-top');
+const backToTop = document.querySelector('back-to-top');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 300) {
     backToTop.classList.add('show');
+    backToTop.style.opacity = 1;
   } else {
     backToTop.classList.remove('show');
+    backToTop.style.opacity = 0;  
   }
 });
 
