@@ -332,6 +332,11 @@ section{
 
 .footer-container h3 {
     margin: 15px;
+    font-family: var(--kudry-font-family);
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-text);
 }
 
 .footer-container p {
@@ -354,11 +359,7 @@ section{
 }
 
 .contato h3 {
-    font-family: var(--kudry-font-family);
-    font-size: var(--h2-font-size);
-    font-weight: 600;
-    text-align: center;
-    color: var(--color-text);
+    margin-bottom: 30px;
 }
 
 
@@ -372,13 +373,7 @@ section{
     color: var(--color-primary);
 }
 
-.endereços h3 {
-    font-family: var(--kudry-font-family);
-    font-size: var(--h2-font-size);
-    font-weight: 600;
-    text-align: center;
-    color: var(--color-text);
-}
+
 .endereços {
     display: flex;
     flex-direction: column;
