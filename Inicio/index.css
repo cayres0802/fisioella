@@ -298,7 +298,7 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Três colunas iguais */
     gap: 20px;
-    width: 100%;
+    width: 96%;
     padding: 20px 2vw; /* t r b l */
     background-color: var(--color-secondary);
     box-shadow: 0px 0px 6px var(--shadow);
