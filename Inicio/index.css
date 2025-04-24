@@ -423,6 +423,12 @@ section{
 
 /* Celulares até 480px */
 @media (max-width: 480px) {
+
+}
+  
+/* Celulares até 768px */
+@media (max-width: 768px) {
+    /* Estilos para celular */
     .footer-container {
         display: grid; /* Garante que o grid seja aplicado */
         grid-template-columns: 1fr; /* Uma única coluna */
@@ -437,11 +443,6 @@ section{
         text-align: center; /* Centraliza o conteúdo */
         font-size: 16px; /* Ajusta o tamanho da fonte */
     }
-}
-  
-/* Celulares até 768px */
-@media (max-width: 768px) {
-    /* Estilos para celular */
 }
   
 /* Tablets até 1024px */
