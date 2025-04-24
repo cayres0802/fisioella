@@ -422,17 +422,30 @@ section{
 }
 
 /* Celulares até 480px */
-@media screen and (max-width: 480px) {
-    /* Estilos para celular pequeno */
-  }
+@media (max-width: 480px) {
+    .footer-container {
+        display: grid; /* Garante que o grid seja aplicado */
+        grid-template-columns: 1fr; /* Uma única coluna */
+        gap: 20px; /* Espaçamento entre os itens */
+        width: 100%; /* Garante que ocupe toda a largura */
+        padding: 20px; /* Ajusta o espaçamento interno */
+    }
+
+    .footer-logo,
+    .contato,
+    .endereços {
+        text-align: center; /* Centraliza o conteúdo */
+        font-size: 16px; /* Ajusta o tamanho da fonte */
+    }
+}
   
-  /* Celulares até 768px */
-  @media screen and (max-width: 768px) {
+/* Celulares até 768px */
+@media (max-width: 768px) {
     /* Estilos para celular */
-  }
+}
   
-  /* Tablets até 1024px */
-  @media screen and (max-width: 1024px) {
+/* Tablets até 1024px */
+@media (max-width: 1024px) {
     /* Estilos para tablet */
   }
   
