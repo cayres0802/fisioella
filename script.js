@@ -28,3 +28,22 @@ document.querySelectorAll('.navbar a').forEach(item => {
         icon.classList.remove('fa-times');
     });
 });
+
+document.querySelectorAll('.accordion').forEach(button => {
+  button.addEventListener('click', () => {
+    const boxContainer = button.closest('.box-container');
+
+    // Fecha os outros
+    document.querySelectorAll('.box-container').forEach(container => {
+      if (container !== boxContainer) {
+        container.classList.remove('expanded');
+      }
+    });
+
+    // Alterna o atual
+    boxContainer.classList.toggle('expanded');
+  });
+});
+
+
+

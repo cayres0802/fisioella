@@ -491,9 +491,15 @@ section{
 
 
     .footer-container {
+        grid-template-columns: repeat(2, 2fr); /* Três colunas iguais */
+    }
+
+    /* .footer-container {
+        
         display:block;
         line-height: 1;
-    }
+    } */
+
     .contato {
         text-align: center;
     }
