@@ -181,7 +181,7 @@ section{
     font-weight: 600;
     color: var(--color-text);
     border-bottom: 3px solid var(--color-primary);
-    max-width: 32%; /* Define a largura máxima */
+    max-width: 260px; /* Define a largura máxima */
     margin: 20px auto; 
     box-shadow: 0px 8px 5px -6px var(--shadow); /* Shadow aplicado apenas no border-bottom */
     
@@ -267,7 +267,7 @@ section{
     height: 310px;
     opacity: 0;
     overflow: hidden;
-    background: rgba(244, 191, 194, 0.8); /* Cor de fundo do painel */
+    background: rgba(244, 191, 194, 0.8);
     color: #333;
     transition: width 0.5s ease, opacity 0.5s ease;
     border-left: none;
@@ -280,12 +280,12 @@ section{
     z-index: -1;
 }
 
-/* Quando expandido */
 .box-container.expanded .box-slider {
     width: 610px;
     opacity: 1;
     padding: 20px;
 }
+
 
 /* Alternância de alinhamento */
 .box-container:nth-child(odd) {
@@ -304,32 +304,6 @@ section{
 .box-container:nth-child(even) .box-slider {
     right: 100%; /* Painel abre à esquerda */
 }
-  
-/*   
-  .box {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--color-secondary);
-    color: white;
-    width: 50%;
-    height: 300px;
-    padding: 20px;
-    border-radius: 30px;
-
-    width: 50%;
-    height: 300px;
-    transition: all 0.5s ease;
-    align-self: center;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 10px;
-    padding: 20px;
-   
-    overflow: hidden;
-} 
-*/
-
 
 
 
@@ -505,10 +479,27 @@ section{
     /* Estilos para celular pequeno */
   }
   
-  /* Celulares até 768px */
-  @media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     /* Estilos para celular */
-  }
+    .footer-container {
+        display: grid; /* Garante que o grid seja aplicado */
+        grid-template-columns: 1fr; /* Uma única coluna */
+        gap: 20px; /* Espaçamento entre os itens */
+        width: 100%; /* Garante que ocupe toda a largura */
+        padding: 20px; /* Ajusta o espaçamento interno */
+        text-align: start;
+    }
+
+    .footer-logo,
+    .contato,
+    .endereços {
+        text-align: center; /* Centraliza o conteúdo */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        line-height: 1;
+    }
+
+      
+}
   
   /* Tablets até 1024px */
   @media screen and (max-width: 1024px) {
@@ -599,10 +590,6 @@ section{
         font-size: 23px;
     }
 
-    #inicio h1{
-        max-width: 38%;
-    }
-
     #inicio p{
         padding: 10px 20px; /* t r b l */
         font-size: 24px;
@@ -612,85 +599,78 @@ section{
 
 
 
-/* Alternância de alinhamento */
-.box-container:nth-child(odd),
-.box-container:nth-child(even) {
-    align-self: center;
-}
-
-/* Painel lateral escondido inicialmente */
+/* Box Slider */
 .box-slider {
-    position: absolute;
-    top: 0; /* Alinha o painel com o topo da box */
-    left: 100%; /* Painel abre à direita */
-    width: 0; /* Inicialmente fechado */
-    height: 100%; /* Altura igual à box */
-    opacity: 0; /* Invisível por padrão */
-    overflow: hidden;
-    background: rgba(244, 191, 194, 0.8); /* Cor de fundo do painel */
-    color: #333;
-    transition: width 0.5s ease, opacity 0.5s ease;
-    border-left: solid var(--color-primary) 2px;
-    border-radius: 0 30px 30px 0; /* Bordas arredondadas no lado direito */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 5px 8px var(--shadow);
-    z-index: 1; /* Garante que o painel fique acima de outros elementos */
-}
-
-/* Quando expandido */
-.box-container.expanded .box-slider {
-    width: 300px; /* Define a largura do painel expandido */
-    opacity: 1; /* Torna visível */
-}
-
-.box-container .box-slider {
-    position: absolute;
-    top: 100%; /* Painel abre abaixo */
-    left: 0;
-    width: 100%;
+    max-width: 450px;    
+    position: relative !important;
+    width: 100% !important;
+    left: 0 !important;
     height: 0;
     opacity: 0;
     overflow: hidden;
-    background: rgba(244, 191, 194, 0.8); /* Cor de fundo do painel */
+    background: rgba(244, 191, 194, 0.8);
     color: #333;
     transition: height 0.5s ease, opacity 0.5s ease;
     border-top: solid var(--color-primary) 2px;
     border-radius: 0 0 30px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     box-shadow: 0 5px 8px var(--shadow);
-    z-index: -1;
+    z-index: 1;
 }
 
-/* Quando expandido */
 .box-container.expanded .box-slider {
-    height: 200px; /* Altura do painel expandido */
+    max-width: 450px;
+    height: 200px;
     opacity: 1;
     padding: 20px;
 }
 
-    .footer-container {
-        grid-template-columns: repeat(2, 2fr); /* Três colunas iguais */
-    }
 
-    /* .footer-container {
-        
-        display:block;
-        line-height: 1;
-    } */
+/* Remove o alinhamento específico para elementos pares e ímpares */
+.box-container {
+    align-self: center; /* Centraliza todos os elementos */
+    max-width: 100%;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
 
-    .contato {
-        text-align: center;
-    }
+/* Remove as regras de alinhamento específicas */
+.box-container:nth-child(odd),
+.box-container:nth-child(even) {
+    align-self: center; /* Centraliza todos os elementos */
+    flex-direction: column; /* Mantém a direção da coluna */
+    height: auto; /* Remove a altura fixa */
+}
 
-    .endereços {
-        text-align: center;
-    }
+.footer-container {
+    grid-template-columns: repeat(2, 2fr); /* Três colunas iguais */
+}
 
+/* .footer-container {
     
+    display:block;
+    line-height: 1;
+} */
+
+.contato {
+    text-align: center;
+}
+
+.endereços {
+    grid-column: 1 / 3;
+    text-align: center;
+}
 
       
 }
+
+@media (max-width: 768px) {
+
+
+}
+
+
+
