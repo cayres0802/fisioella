@@ -533,10 +533,10 @@ button[type="submit"]:hover {
     }
 
     button[type="submit"] {
-        font-size: 15px;
+        font-size: 20px;
         width: 40vw;
     }
-    
+
     .footer-container {
         display: grid; 
         grid-template-columns: repeat(2, 1fr);
@@ -574,9 +574,7 @@ button[type="submit"]:hover {
     }     
 }
 
-@media (max-width:411px) {
-
-
+@media (max-width:615px) {
 
     .footer-container {
         display: flex;
