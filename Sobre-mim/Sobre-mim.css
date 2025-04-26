@@ -505,24 +505,49 @@ section{
 
 
     .footer-container {
-        grid-template-columns: repeat(2, 2fr); /* Três colunas iguais */
+        display: grid; 
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; 
+        width: 100%; 
+        padding: 20px;
+        text-align: start;
+        
     }
 
-    /* .footer-container {
-        
-        display:block;
+    .footer-logo,
+    .contato,
+    .endereços {
+        text-align: center; 
+        font-size: 14px; 
         line-height: 1;
-    } */
+    }
 
     .contato {
         text-align: center;
     }
 
+    .contato h3 {
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+
+    .endereços h3 {
+        margin: 10px;
+        margin-bottom: 20px;
+    }
     .endereços {
         grid-column: 1 / 3;
         text-align: center;
-    }
-    
+    }     
+}
 
-      
+@media (max-width:411px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+        text-align: start;
+    }
 }
