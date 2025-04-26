@@ -574,7 +574,7 @@ button[type="submit"]:hover {
     }     
 }
 
-@media (max-width:615px) {
+@media (max-width:411px) {
 
     .footer-container {
         display: flex;
