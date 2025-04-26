@@ -570,6 +570,11 @@ button[type="submit"]:hover {
 }
 
 @media (max-width:411px) {
+
+    button[type="submit"] {
+        font-size: 20px;
+    }
+
     .footer-container {
         display: flex;
         flex-direction: column;
