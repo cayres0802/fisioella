@@ -1,4 +1,6 @@
-const backToTop = document.querySelector('back-to-top');
+/* Botão de voltar ao topo */
+
+const backToTop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
@@ -9,6 +11,9 @@ window.addEventListener('scroll', () => {
     backToTop.style.opacity = 0;  
   }
 });
+
+
+/* Menu Hamburguer */
 
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
@@ -29,6 +34,8 @@ document.querySelectorAll('.navbar a').forEach(item => {
     });
 });
 
+/* Botão de expandir */
+
 document.querySelectorAll('.accordion').forEach(button => {
   button.addEventListener('click', () => {
     const boxContainer = button.closest('.box-container');
@@ -45,6 +52,19 @@ document.querySelectorAll('.accordion').forEach(button => {
   });
 });
 
+/* Contato */
 
+function sendWhatsAppMessage(event) {
+  event.preventDefault(); // Evita o envio padrão do formulário
 
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const message = document.getElementById('message').value;
+
+  const whatsappNumber = '5512996461927'; // Substitua pelo número do WhatsApp
+  const text = `Oii, meu nome é ${name}. ${message}`;
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+  window.open(url, '_blank'); // Abre o WhatsApp em uma nova aba
+}
 

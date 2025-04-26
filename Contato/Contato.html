@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fisioella</title>
+    <title>Fisioella | Contato</title>
     <meta name="description" content="Fisioella - Your health is our priority. We offer a range of physiotherapy services tailored to your needs.">
     <meta name="keywords" content="Fisioella, physiotherapy, health, wellness, services">
     <meta name="author" content="Clara Cayres">
-    <link rel="stylesheet" href="Tratamentos.css">
+    <link rel="stylesheet" href="Contato.css">
     <script src="../script.js" defer></script>
     <link rel="icon" href="/images/favicon.png?v=1" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,10 +35,10 @@
         </div>
         <nav class="navbar">
             <ul class="nav-list">
-                <li><a class="pages" href="/index.html">Início</a></li>
-                <li><a class="pages" href="/Sobre-mim/Sobre-mim.html">Sobre mim</a></li>
-                <li><a class="pages" href="/Tratamentos/Tratamentos.html">Tratamentos</a></li>
-                <li><a class="pages" href="/Contato/Contato.html">Contato</a></li>
+                <li><a class="pages" href="../index.html">Início</a></li>
+                <li><a class="pages" href="../Sobre-mim/Sobre-mim.html">Sobre mim</a></li>
+                <li><a class="pages" href="../Tratamentos/Tratamentos.html">Tratamentos</a></li>
+                <li><a class="pages" href="Contato.html">Contato</a></li>
 
             </ul>
         </nav>
@@ -54,9 +54,21 @@
         
         <section id="inicio">
             <div class="main-text">
-                <h1>TRATAMENTOS</h1>
-                <div class="containers"> 
-        
+                <h1>Contato</h1>
+                <div class="contato-container"> 
+                    <p>Para mais informações, entre em contato conosco através dos números ou e-mail listados no rodapé.</p>
+                    <div id="whatsapp-form">
+                        <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                                    
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+                    
+                            <button type="submit">Enviar pelo WhatsApp</button>
+                        </form>
+                    </div>
+
         </section>
     </main>
 
