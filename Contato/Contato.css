@@ -573,6 +573,7 @@ button[type="submit"]:hover {
 
     button[type="submit"] {
         font-size: 20px;
+        width: 40vw;
     }
 
     .footer-container {
