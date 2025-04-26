@@ -247,6 +247,8 @@ label {
 }
 
 input[type="text"],
+input[type="tel"],
+input[type="email"],
 input[type="message"],
 textarea { 
     background-color: transparent;
@@ -256,11 +258,13 @@ textarea {
     width: 50vw;
     font-family: var(--text-font-family);
     font-size: var(--p-font-size);
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 
 input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
 input[type="message"]:focus,
 textarea:focus {
     outline: none;

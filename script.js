@@ -54,16 +54,54 @@ document.querySelectorAll('.accordion').forEach(button => {
 
 /* Contato */
 
-function sendWhatsAppMessage(event) {
-  event.preventDefault(); // Evita o envio padrão do formulário
+// function sendWhatsAppMessage(event) {
+//   event.preventDefault(); // Evita o envio padrão do formulário
+
+//   const name = document.getElementById('name').value;
+//   const message = document.getElementById('message').value;
+
+//   const whatsappNumber = '5512996461927'; // Substitua pelo número do WhatsApp
+//   const text = `Oii, meu nome é ${name}. ${message}`;
+//   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+//   window.open(url, '_blank'); // Abre o WhatsApp em uma nova aba
+// }
+
+async function handleFormSubmit(event) {
+  event.preventDefault();
 
   const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
   const message = document.getElementById('message').value;
 
-  const whatsappNumber = '5512996461927'; // Substitua pelo número do WhatsApp
-  const text = `Oii, meu nome é ${name}. ${message}`;
-  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+  // Enviar para o Formspree
+  const formspreeUrl = 'https://formspree.io/f/mgvkvlwl'; 
+  const formData = {
+      name: name,
+      email: email,
+      phone: phone,
+      message: message
+  };
 
-  window.open(url, '_blank'); // Abre o WhatsApp em uma nova aba
+  try {
+      await fetch(formspreeUrl, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+      });
+      console.log('Mensagem enviada para o Formspree!');
+  } catch (error) {
+      console.error('Erro ao enviar para o Formspree:', error);
+  }
+
+  // Redirecionar para o WhatsApp
+  const whatsappNumber = '5512996461927';
+  const whatsappMessage = `Olá, meu nome é ${name}. ${message}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappUrl, '_blank');
 }
 
