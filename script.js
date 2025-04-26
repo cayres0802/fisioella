@@ -58,7 +58,6 @@ function sendWhatsAppMessage(event) {
   event.preventDefault(); // Evita o envio padrão do formulário
 
   const name = document.getElementById('name').value;
-  const phone = document.getElementById('phone').value;
   const message = document.getElementById('message').value;
 
   const whatsappNumber = '5512996461927'; // Substitua pelo número do WhatsApp
