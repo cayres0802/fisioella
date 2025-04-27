@@ -76,7 +76,7 @@ async function handleFormSubmit(event) {
   const message = document.getElementById('message').value;
 
   // Enviar para o Formspree
-  const formspreeUrl = 'https://formspree.io/f/mgvkvlwl'; 
+  const formspreeUrl = 'https://formspree.io/f/mblolqvz'; 
   const formData = {
       name: name,
       email: email,
